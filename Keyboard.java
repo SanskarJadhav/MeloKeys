@@ -84,7 +84,6 @@ public class Keyboard {
             panel.setPreferredSize(new Dimension(initialWidth, initialHeight));
 
             JFrame frame = new JFrame("3 Octave Keyboard");
-            //frame.setMinimumSize(new Dimension(initialWidth / 2, initialHeight / 2));
             frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             frame.add(panel);
             frame.pack(); // uses preferred sizes for larger viewing
@@ -147,8 +146,6 @@ public class Keyboard {
                 if (keysDown.contains(blackKey.getKeyStroke())) {
                     blackKey.draw(g, width, height, Color.GREEN, Color.WHITE);
                 }
-
-                // draw as usual
                 else {
                     blackKey.draw(g, width, height, Color.BLACK, Color.GRAY);
                 }
@@ -267,7 +264,7 @@ public class Keyboard {
 
         }
 
-        // the computer keyboard keystroke corresponding to this piano key
+        // the computer keyboard keystroke corresponds to this piano key
         private char getKeyStroke() {
             return keyStroke;
         }
